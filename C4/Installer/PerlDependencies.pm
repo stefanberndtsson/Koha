@@ -852,6 +852,11 @@ our $PERL_DEPS = {
         required => 1,
         min_ver => '0.28',
     },
+    'String::Similarity' => {
+        usage => 'cataloguing',
+        required => 1,
+        min_version => '1.04',
+    },
 };
 
 1;
