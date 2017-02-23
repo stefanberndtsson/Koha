@@ -1,0 +1,1 @@
+INSERT IGNORE INTO systempreferences (`variable`, `value`, `options`, `explanation`, `type`) VALUES ('NoAdvanceNoticeWhenAutoRenewal', '0', '', 'Disable advance notices when auto renew was used', 'YesNo');

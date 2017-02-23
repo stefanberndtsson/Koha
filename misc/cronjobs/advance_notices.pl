@@ -278,6 +278,7 @@ UPCOMINGITEM: foreach my $upcoming ( @$upcoming_dues ) {
                                                                                    message_name   => 'advance_notice' } );
         next UPCOMINGITEM unless $borrower_preferences && exists $borrower_preferences->{'days_in_advance'};
         next UPCOMINGITEM unless $borrower_preferences->{'days_in_advance'} == $upcoming->{'days_until_due'};
+        next UPCOMINGITEM if C4::Context->preference('NoAdvanceNoticeWhenAutoRenewal') && $upcoming->{'auto_renew'};
 
         if ( $borrower_preferences->{'wants_digest'} ) {
             # cache this one to process after we've run through all of the items.

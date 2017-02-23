@@ -260,6 +260,12 @@ Circulation:
                   Calendar: the calendar to skip all days the library is closed.
                   Datedue: the calendar to push the due date to the next open day
         -
+            - pref: NoAdvanceNoticeWhenAutoRenewal
+              choices:
+                  yes: Do not send
+                  no: Send
+            - advance notice when loan was automatically renewable when issued.
+        -
             - Calculate "No renewal before" based on
             - pref: NoRenewalBeforePrecision
               choices:
